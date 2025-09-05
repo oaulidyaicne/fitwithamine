@@ -44,12 +44,18 @@ if (form) {
     const msgEl = document.getElementById("message");
 
     const customer = {
-      firstName: document.getElementById("firstName").value,
-      lastName:  document.getElementById("lastName").value,
-      age:       document.getElementById("age").value,
-      height:    document.getElementById("height").value,
-      weight:    document.getElementById("weight").value
+      firstName: document.getElementById("firstName").value.trim(),
+      lastName:  document.getElementById("lastName").value.trim(),
+      age:       parseInt(document.getElementById("age").value, 10),
+      height:    parseInt(document.getElementById("height").value, 10),
+      weight:    parseInt(document.getElementById("weight").value, 10)
     };
+
+    // basic validation
+    if (customer.age <= 0 || customer.height <= 0 || customer.weight <= 0) {
+      msgEl.textContent = "⚠️ Please enter valid values.";
+      return;
+    }
 
     try {
       const customers = await fetchCustomers();
