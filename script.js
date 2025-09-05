@@ -1,6 +1,6 @@
 /************ CONFIG ************/
-const BIN_ID   = "68bb36c1d0ea881f4073162c";   // your bin id
-const API_KEY  = "$2a$10$FpSddJCx8IVth3u50X7kdeQbeDoXRYHcgCKQN9iqERYCEdut5mhqa"; // your X-Master-Key
+const BIN_ID   = "68bb5669d0ea881f40733227";   // your bin id
+const API_KEY  = "$2a$10$eFrRV6BfZQFdUkldk2BExOtYmnRjlpzeRt4/D4sgFXOzQopUSbZKi"; // your X-Master-Key
 const BASE_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
 /********************************/
 
